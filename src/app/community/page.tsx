@@ -32,8 +32,7 @@ export default function CommunityPage() {
 
       {/* 動画投稿フォーム */}
       <section className="mb-12">
-        <div className="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md">
-          <h3 className="text-2xl font-bold text-green-700 mb-4">動画を投稿する</h3>
+        <div className="max-w-2xl mx-auto bg-white p-4 md:p-8 rounded-lg shadow-md">
           <form onSubmit={handleVideoSubmit}>
             <div className="mb-4">
               <label htmlFor="title" className="block text-gray-700 font-bold mb-2">タイトル</label>
@@ -88,7 +87,7 @@ export default function CommunityPage() {
       {/* チャットスペース */}
       <section className="mt-12">
         <h3 className="text-2xl font-bold text-green-700 mb-4">チャットスペース</h3>
-        <div className="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md">
+        <div className="max-w-2xl mx-auto bg-white p-4 md:p-8 rounded-lg shadow-md">
           <div className="h-64 overflow-y-auto border border-gray-300 p-4 rounded-lg mb-4">
             {/* ダミーのチャットメッセージ */}
             <div className="mb-2">
@@ -101,9 +100,9 @@ export default function CommunityPage() {
               <span className="font-bold text-blue-600">ゴルフ大好きさん:</span> それは素晴らしいですね！私も新しいクラブが欲しいです。
             </div>
           </div>
-          <div className="flex">
-            <input type="text" className="flex-grow px-3 py-2 border rounded-l-lg focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="メッセージを入力..." />
-            <button type="button" onClick={handleChatSubmit} className="bg-green-600 text-white font-bold py-2 px-4 rounded-r-lg hover:bg-green-700 transition-colors">送信</button>
+          <div className="flex flex-col md:flex-row">
+            <input type="text" className="flex-grow px-3 py-2 border rounded-t-lg md:rounded-l-lg md:rounded-t-none focus:outline-none focus:ring-2 focus:ring-green-500 mb-2 md:mb-0" placeholder="メッセージを入力..." />
+            <button type="button" onClick={handleChatSubmit} className="bg-green-600 text-white font-bold py-2 px-4 rounded-b-lg md:rounded-r-lg md:rounded-b-none hover:bg-green-700 transition-colors">送信</button>
           </div>
         </div>
       </section>

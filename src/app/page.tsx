@@ -3,12 +3,14 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="bg-white">
-      <header className="bg-green-700 text-white shadow-md">
-        <div className="container mx-auto px-4 py-4 flex justify-start items-center h-24 gap-4">
-          <h1 className="text-3xl font-bold">スギプロゴルフ道場広場</h1>
-          <p className="text-lg">最高のゴルフ体験を、あなたに。スギプロゴルフ道場で、もっとゴルフが好きになる。</p>
-          <nav className="ml-auto">
-            <a href="/community" className="text-lg font-bold hover:text-green-200 transition-colors">コミュニティ広場へ</a>
+      <header className="bg-green-700 text-white shadow-md min-h-24">
+        <div className="w-full px-4 py-2 flex flex-col md:flex-row justify-between items-center min-h-24">
+          <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+            <h1 className="text-xl md:text-3xl font-bold">スギプロゴルフ道場広場</h1>
+            <p className="text-sm md:text-lg">最高のゴルフ体験を、あなたに。スギプロゴルフ道場で、もっとゴルフが好きになる。</p>
+          </div>
+          <nav className="mt-4 md:mt-0 w-full text-center">
+            <a href="/community" className="bg-white text-green-700 px-4 py-2 rounded-lg shadow-md hover:bg-gray-100 transition-colors inline-block">コミュニティ広場へ</a>
           </nav>
         </div>
       </header>
